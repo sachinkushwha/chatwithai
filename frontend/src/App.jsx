@@ -28,12 +28,13 @@ function App() {
       </h1>
 
       {/* Chat component */}
-      <div className="w-full  max-w-md flex-1 overflow-y-auto mb-4">
+      <div className="w-full relative bottom-[40px] max-w-md flex-1 overflow-y-auto mb-4">
         <Chats messages={chatHistory} usermsg={usermsg} />
       </div>
 
       {/* Input form */}
-       <form
+      <div className="w-full max-w-md fixed bottom-0 left-0 right-0 px-3 sm:px-0 mx-auto bg-white py-3 z-10 shadow-md">
+      <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-3 sm:p-4 rounded-xl shadow-md flex gap-2"
       >
@@ -50,6 +51,7 @@ function App() {
           Send
         </button>
       </form>
+      </div>
     </div>
   );
 }
