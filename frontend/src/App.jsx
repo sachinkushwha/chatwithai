@@ -28,13 +28,12 @@ function App() {
       </h1>
 
       {/* Chat component */}
-      <div className="w-full max-w-md flex-1 overflow-y-auto mb-4">
+      <div className="w-full  max-w-md flex-1 overflow-y-auto mb-4">
         <Chats messages={chatHistory} usermsg={usermsg} />
       </div>
 
       {/* Input form */}
-      
-      <form
+       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-3 sm:p-4 rounded-xl shadow-md flex gap-2"
       >

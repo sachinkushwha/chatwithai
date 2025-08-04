@@ -15,11 +15,11 @@ export const Chats = ({ messages, usermsg }) => {
       <div className="space-y-4 ">
         {combinedChats?.map((chat, index) => (
           <div key={index} className="space-y-2">
-            <div className="bg-blue-100 text-blue-900 flex flex-col sm:flex-row gap-2 p-3 rounded-lg shadow-md">
+            <div className="bg-blue-100 text-blue-900 flex flex-row sm:flex-row gap-2 p-3 rounded-lg shadow-md">
               <strong>You:</strong>
               <p className="break-words">{chat.user}</p>
             </div>
-            <div className="bg-gray-200 text-gray-800 flex flex-col sm:flex-row gap-2 p-3 rounded-lg shadow-md">
+            <div className="bg-gray-200 text-gray-800 flex flex-row sm:flex-row gap-2 p-3 rounded-lg shadow-md">
               <strong>Bot:</strong>
               <p className="break-words">{chat.bot}</p>
             </div>
