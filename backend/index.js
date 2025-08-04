@@ -22,11 +22,10 @@ app.post('/', async (req, res) => {
             })
         })
         const result = await response.json();
-        console.log(result);
         res.status(200).json(result.choices[0].message.content.replace(/<think>[\s\S]*?<\/think>\n*/, ''));
     } catch (err) {
         console.log(err);
-        res.status(500).json('fir se pucho');
+        res.status(500).json('ask again');
     }
 })
 app.listen(3000, () => {
