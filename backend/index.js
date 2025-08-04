@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 require('dotenv').config();
-app.use(cors());
+app.use(cors({origin:"https://chatwithai-n5k5.vercel.app/"}));
 app.use(express.urlencoded());
 app.use(express.json());
 app.post('/', async (req, res) => {
