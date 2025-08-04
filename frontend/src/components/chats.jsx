@@ -12,7 +12,7 @@ export const Chats = ({ messages, usermsg }) => {
 
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-0 max-w-md mx-auto mt-6 space-y-4">
-      <div className="space-y-4">
+      <div className="space-y-4 ">
         {combinedChats?.map((chat, index) => (
           <div key={index} className="space-y-2">
             <div className="bg-blue-100 text-blue-900 flex flex-col sm:flex-row gap-2 p-3 rounded-lg shadow-md">
