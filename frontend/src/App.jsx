@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600">J.A.R.V.I.S</h1>
+      <h1 className="text-3xl font-bold mb-6 text-blue-600 sticky top-0">J.A.R.V.I.S</h1>
       <Chats messages={chatHistory} usermsg={usermsg} />
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-4 rounded-xl shadow-md flex gap-2">
         <input
