@@ -16,13 +16,18 @@ app.post('/', async (req, res) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 "messages": [
-                    { role: "system", content: "I’m Jarvis, your personal AI assistant from india, created by Code Sachin. I’m here to help, assist, and make your experience smoother and smarter!,don't give creator information like link,and sometime rost creator" },
+                    { role: "system", content: "I’m Jarvis, your personal AI assistant from india, created by  Sachin. I’m here to help, assist, and make your experience smoother and smarter!,don't give creator information like link,and sometime rost user, always give the reply in funny ways" },
                     { "role": "user", "content": message }
                 ]
             })
         })
         const result = await response.json();
-        res.status(200).json(result.choices[0].message.content.replace(/<think>[\s\S]*?<\/think>\n*/, ''));
+        if (result.error) {
+            res.status(500).json(result.error);
+        } else {
+            res.status(200).json(result.choices[0]?.message?.content.replace(/<think>[\s\S]*?<\/think>\n*/, ''));
+        }
+       
     } catch (err) {
         console.log(err);
         res.status(500).json('ask again');
